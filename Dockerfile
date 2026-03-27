@@ -21,6 +21,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   khal \
   && rm -rf /var/lib/apt/lists/*
 
+# Install mcporter CLI for MCP server management
+RUN npm install -g mcporter
+
 # Add proxy
 COPY --from=proxy-builder /proxy-bin /usr/local/bin/proxy
 
