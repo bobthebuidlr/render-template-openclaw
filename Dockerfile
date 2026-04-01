@@ -27,6 +27,8 @@ RUN npm install -g bun
 # Install mcporter CLI for MCP server management
 RUN npm install -g mcporter
 
+RUN npm install -g @anthropic-ai/claude-code
+
 # Add proxy
 COPY --from=proxy-builder /proxy-bin /usr/local/bin/proxy
 
